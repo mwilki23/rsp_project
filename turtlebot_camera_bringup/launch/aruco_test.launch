@@ -1,0 +1,13 @@
+<launch
+	<include file="$(find turtlebot_camera_bringup)/launch/camera_bringup.launch"/>
+	
+	<include file="$(find aruco_detect)/launch/aruco_detect.launch">
+		args="transport:=compressed verbose:=true"	
+	</include>
+ 
+	<node pkg="rqt_gui" 
+        type="rqt_gui" 
+        name="rqt_gui"
+    </node>
+
+</launch>
