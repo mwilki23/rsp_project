@@ -1,6 +1,6 @@
 #include <ros/ros.h>
 #include <geometry_msgs/Twist.h>
-//include <fiducial_msgs/FiducialTransforms.h>
+#include <fiducial_msgs/FiducialTransform.h>
 
 class target_follow{
 
@@ -9,11 +9,13 @@ class target_follow{
         ros::NodeHandle nh;
         ros::Subscriber sub_artf;
         ros::Publisher pub_wheelcmd;
+        double x_dist; 
+        double z_dist; 
 
     public:
         target_follow(ros::NodeHandle& nh);
         ~target_follow(){}
 
-        //void callback_artf(const fiducial_msgs::FiducialTransforms& artf);
+        void callback_artf(const fiducial_msgs::FiducialTransform& artf);
         void publish_wheelcmd();
 };
