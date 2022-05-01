@@ -9,6 +9,8 @@ class target_follow{
         ros::NodeHandle nh;
         ros::Subscriber sub_artf;
         ros::Publisher pub_wheelcmd;
+        ros::Rate rate;
+
         double x_dist; 
         double z_dist; 
 
@@ -17,5 +19,4 @@ class target_follow{
         ~target_follow(){}
 
         void callback_artf(const fiducial_msgs::FiducialTransform& artf);
-        void publish_wheelcmd();
 };
