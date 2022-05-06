@@ -1,0 +1,12 @@
+<launch>
+	<include file="$(find aruco_detect)/launch/aruco_detect.launch">
+		<arg name="transport" value="compressed"/>
+		<arg name="verbose" value="true"/>
+	</include>
+
+	<node pkg="rqt_image_view" 
+        	type="rqt_image_view" 
+        	name="rqt_image_view">
+	</node>
+
+</launch>

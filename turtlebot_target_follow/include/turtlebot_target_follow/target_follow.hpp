@@ -12,6 +12,8 @@ class target_follow{
         ros::Publisher pub_wheelcmd;
         ros::Rate rate;
 
+	geometry_msgs::Twist wheelcmd;
+
 	//fiducial_msgs::FiducialTransformArray empty_tf;
 
         double x_dist; 
@@ -21,7 +23,9 @@ class target_follow{
         double z_quat; 
         double w_quat; 
 	
-	double bot_to_fid_yaw;
+	double x_rot;
+	double y_rot;
+	double z_rot;	
 
     public:
         target_follow(ros::NodeHandle& nh);
