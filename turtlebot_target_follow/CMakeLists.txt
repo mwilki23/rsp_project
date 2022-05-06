@@ -155,6 +155,7 @@ target_link_libraries(target_follow
 )
 
 target_link_libraries(target_follow_node
+   ${catkin_LIBRARIES}
    target_follow
 )
 

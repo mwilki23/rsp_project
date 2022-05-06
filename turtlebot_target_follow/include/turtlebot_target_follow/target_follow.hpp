@@ -1,5 +1,6 @@
 #include <ros/ros.h>
 #include <geometry_msgs/Twist.h>
+#include <fiducial_msgs/FiducialTransformArray.h>
 #include <fiducial_msgs/FiducialTransform.h>
 
 class target_follow{
@@ -11,12 +12,20 @@ class target_follow{
         ros::Publisher pub_wheelcmd;
         ros::Rate rate;
 
+	//fiducial_msgs::FiducialTransformArray empty_tf;
+
         double x_dist; 
         double z_dist; 
+	double x_quat; 
+        double y_quat; 
+        double z_quat; 
+        double w_quat; 
+	
+	double bot_to_fid_yaw;
 
     public:
         target_follow(ros::NodeHandle& nh);
         ~target_follow(){}
 
-        void callback_artf(const fiducial_msgs::FiducialTransform& artf);
+        void callback_artf(const fiducial_msgs::FiducialTransformArray& artf);
 };
