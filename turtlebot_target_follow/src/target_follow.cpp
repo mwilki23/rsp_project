@@ -34,7 +34,7 @@ void target_follow::callback_artf(const fiducial_msgs::FiducialTransformArray& a
         z_quat = artf.transforms[0].transform.rotation.z;
         w_quat = artf.transforms[0].transform.rotation.w;
 
-	bot_to_fid_yaw = asin(2*x_quat*y_quat + 2*z_quat*w_quat); // found this online
+	bot_to_fid_yaw = asin(2*w_quat*y_quat - 2*z_quat*x_quat); // found this on wikipedia
 
 	std::cout<<"bot_to_fid_yaw = " << bot_to_fid_yaw <<std::endl;
 
