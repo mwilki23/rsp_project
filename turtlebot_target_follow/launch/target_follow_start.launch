@@ -1,7 +1,10 @@
 <launch>
 	<arg name="fiducial_length" default="0.045"/>
+	<arg name="verbose" default="true"/>
+
 	<include file="$(find turtlebot_camera_bringup)/launch/aruco_startup.launch">
 		<arg name="fid_len" value = "$(arg fiducial_length)"/>
+		<arg name="verbose_opt" value = "$(arg verbose)"/>
 	</include>
 
 	<node pkg="turtlebot_target_follow" 

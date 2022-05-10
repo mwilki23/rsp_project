@@ -1,8 +1,9 @@
 <launch>
+	<arg name="verbose_opt" default="false"/>
 	<arg name="fid_len" default="0.14"/>
 	<include file="$(find aruco_detect)/launch/aruco_detect.launch">
 		<arg name="transport" value="compressed"/>
-		<arg name="verbose" value="true"/>
+		<arg name="verbose" value="$(arg verbose_opt)"/>
 		<arg name="fiducial_len" value="$(arg fid_len)"/>
 	</include>
 
