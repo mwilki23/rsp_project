@@ -51,10 +51,13 @@ void target_follow::callback_artf(const fiducial_msgs::FiducialTransformArray& a
 	else{ wheelcmd.angular.z = 0.0;}
 	if (z_dist > 1.0){
 		wheelcmd.linear.x = 0.1;
-		std::cout << "artag_dist > 1m" << std::endl;
+		std::cout << "artag_dist > 1m, moving forward" << std::endl;
+	}else if (z_dist < 0.8){
+		wheelcmd.linear.x = -0.025;
+		std::cout << "artag_dist < 1m, backing up" << std::endl;
 	}else{
 		wheelcmd.linear.x = 0.0;
-		std::cout << "artag_dist < 1m" << std::endl;
+		std::cout << "artag_dist @ ~1m" << std::endl;
 	}
 
     }

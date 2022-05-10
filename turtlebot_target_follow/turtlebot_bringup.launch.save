@@ -1,9 +1,8 @@
 <launch>
-	<arg name="fid_len" default="0.14"/>
-	<include file="$(find aruco_detect)/launch/aruco_detect.launch">
+	<include file="$(find aruco_detectunch/aruco_detect.launch">
 		<arg name="transport" value="compressed"/>
 		<arg name="verbose" value="true"/>
-		<arg name="fiducial_len" value="$(arg fid_len)"/>
+		<arg name="fiducial_len" value="0.14"/>
 	</include>
 
 	<node pkg="rqt_image_view" 
