@@ -1,0 +1,12 @@
+<launch>
+	<include file="$(find turtlebot_camera_bringup)/launch/aruco_startup.launch">
+
+	</include>
+
+	<node pkg="turtlebot_target_follow" 
+        	type="target_follow_node" 
+        	name="target_follow"
+		output = "screen">
+	</node>
+
+</launch>

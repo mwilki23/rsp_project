@@ -1,0 +1,7 @@
+<launch>
+	<include file="$(find turtlebot3_bringup)/launch/robot_bringup.launch">
+	</include>
+
+	<include file="$(find turtlebot_camera_bringup)/launch/camera_bringup.launch">
+	</include>
+</launch>
