@@ -4,6 +4,7 @@
 target_follow::target_follow(ros::NodeHandle& nh): nh(nh),rate(10){
     sub_artf = nh.subscribe("/fiducial_transforms",10,&target_follow::callback_artf, this);
     pub_wheelcmd = nh.advertise<geometry_msgs::Twist>("cmd_vel",10);
+	sim_pub_wheelcmd = nh.advertise<geometry_msgs::Twist>("turtle_follower/cmd_vel",10);
 }
 
 
@@ -78,6 +79,7 @@ void target_follow::callback_artf(const fiducial_msgs::FiducialTransformArray& a
     }
     
   pub_wheelcmd.publish(wheelcmd);
+  sim_pub_wheelcmd.publish(wheelcmd);
 
 }
 

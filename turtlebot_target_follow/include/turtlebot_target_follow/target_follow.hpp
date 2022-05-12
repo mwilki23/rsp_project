@@ -10,6 +10,7 @@ class target_follow{
         ros::NodeHandle nh;
         ros::Subscriber sub_artf;
         ros::Publisher pub_wheelcmd;
+        ros::Publisher sim_pub_wheelcmd;
         ros::Rate rate;
 
 	geometry_msgs::Twist wheelcmd;
