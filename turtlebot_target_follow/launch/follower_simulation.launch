@@ -1,3 +1,7 @@
+<!--- Starts the main launch file for the simulation only version of the project -->
+	<!---  Spawns a gazebo follower turtlebot -->
+	<!---  Spawns a gazebo AR target leader turtlebot with teleop control -->
+
 <launch>
 
     <arg name="turtle1"  default="turtle_ar"/>
