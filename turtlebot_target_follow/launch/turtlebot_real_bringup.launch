@@ -1,0 +1,5 @@
+<launch>
+	<include file="$(find turtlebot3_gazebo)/launch/turtlebot3_empty_world.launch">
+		<remap from="cmd_vel" to="turtle_follower/cmd_vel"/>	
+	</include>
+</launch>

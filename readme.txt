@@ -10,7 +10,7 @@
 This will launch the raspicamera,  do the image transport needed for the ar tag processing node, and launch the turtlebot3_robot.bringup which starts all the motor drivers, gryo, etc on the turtlebot. 
 
 4. On main computer run:
-	roslaunch turtlebot_target_follow tartget_follow_start
+	roslaunch turtlebot_target_follow target_follow_start.launch
 
 This is start the aruco package which handles the ar tag transforms, the rqt_image_view so the user can see what the camera is seeing, and the target_follow_node which reads in the ar tag transform and sends appriopriate motor commands to the cmd_vel topic for the turtlebot to move.
 

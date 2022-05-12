@@ -19,6 +19,7 @@ find_package(catkin REQUIRED COMPONENTS
   raspicam_node
   turtlebot3_bringup
   turtlebot_camera_bringup
+  turtlebot3_gazebo
 )
 
 ## System dependencies are found with CMake's conventions
