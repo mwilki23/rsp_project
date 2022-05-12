@@ -1,3 +1,7 @@
+<!--- This launchfile spawns a turtlebot with an AR tag attached -->
+
+
+
 <launch>
   <arg name="model" default="burger"/>
   
