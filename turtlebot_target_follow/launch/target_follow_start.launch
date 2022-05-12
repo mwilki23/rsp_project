@@ -2,10 +2,14 @@
 	<arg name="fiducial_length" default="0.045"/>
 	<arg name="verbose" default="true"/>
 
-	<include file="$(find turtlebot_camera_bringup)/launch/aruco_startup.launch">
+<!--	<include file="$(find turtlebot_camera_bringup)/launch/aruco_startup.launch">
 		<arg name="fid_len" value = "$(arg fiducial_length)"/>
 		<arg name="verbose_opt" value = "$(arg verbose)"/>
-	</include>
+	</include> -->
+
+	<param name="forward_vel" type = "double" value = "0.1"/>
+	<param name="reverse_vel" type = "double" value = "0.025"/>
+	<param name="spin_vel" type = "double" value = "0.1"/>
 
 	<node pkg="turtlebot_target_follow" 
         	type="target_follow_node" 

@@ -18,8 +18,9 @@ void target_follow::callback_artf(const fiducial_msgs::FiducialTransformArray& a
 	wheelcmd.linear.x =  0.0;
 	
 	double sgn_latshift = abs(x_dist+0.0001)/(x_dist+0.0001); //get lateral shift direction btwn bot and tag and no divide by zero error
-
-	wheelcmd.angular.z = -1.0*sgn_latshift*0.10; //rotates slowly to search for tag
+	nh.param("spin_vel",spin_vel,0.1);
+	wheelcmd.angular.z = -1.0*sgn_latshift*spin_vel; //rotates slowly to search for tag
+	std::cout<<spin_vel<<std::endl;
     }
   else{
 
@@ -47,12 +48,17 @@ void target_follow::callback_artf(const fiducial_msgs::FiducialTransformArray& a
 	
 	//motion commands based on distance and orientation to transform
 	if (z_dist > 1.2){
-		wheelcmd.linear.x = 0.1;
+		nh.param("forward_vel",forward_vel,0.1);
+		wheelcmd.linear.x = forward_vel;
+		//wheelcmd.linear.x = 0.1;
 		std::cout << "artag_dist > 1m, moving forward" << std::endl;
+		std::cout<<forward_vel<<std::endl;
 		motion_dir = 1.0;
 	}else if (z_dist < 0.8){
-		wheelcmd.linear.x = -0.025;
+		nh.param("reverse_vel",reverse_vel,0.025);
+		wheelcmd.linear.x = -1.0*reverse_vel;
 		std::cout << "artag_dist < 1m, backing up" << std::endl;
+		std::cout<<reverse_vel<<std::endl;
 		motion_dir = -1.0;
 	}else{
 		wheelcmd.linear.x = 0.0;

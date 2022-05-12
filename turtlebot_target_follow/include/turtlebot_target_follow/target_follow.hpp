@@ -27,7 +27,10 @@ class target_follow{
 	double y_rot;
 	double z_rot;
 
-	double motion_dir;	
+	double motion_dir;
+        double forward_vel;
+        double reverse_vel;
+        double spin_vel;	
 
     public:
         target_follow(ros::NodeHandle& nh);
