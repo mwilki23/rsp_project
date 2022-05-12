@@ -1,0 +1,53 @@
+<launch>
+  <arg name="model" default="burger"/>
+  
+  <arg name="turtle1"  default="turtle_ar"/>
+  <arg name="turtle1_x_pos" default="0.5"/>
+  <arg name="turtle1_y_pos" default="0.0"/>
+  <arg name="turtle1_z_pos" default=" 0.0"/>
+  <arg name="turtle1_yaw"   default=" 0.0"/>
+
+  <arg name="turtle2" default="turtle_follower"/>
+  <arg name="turtle2_x_pos" default=" 0.0"/>
+  <arg name="turtle2_y_pos" default="0.0"/>
+  <arg name="turtle2_z_pos" default=" 0.0"/>
+  <arg name="turtle2_yaw"   default=" 0.0"/>
+
+
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find turtlebot3_description)/world/turtle_world.world"/>
+    <arg name="paused" value="false"/>
+    <arg name="use_sim_time" value="true"/>
+    <arg name="gui" value="true"/>
+    <arg name="headless" value="false"/>
+    <arg name="debug" value="false"/>
+  </include> 
+
+  <group ns = "$(arg turtle1)">
+    <param name="robot_description" command="$(find xacro)/xacro $(find turtlebot_description)/urdf/turtlebot3_ar.urdf.xacro" />
+
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
+      <param name="publish_frequency" type="double" value="50.0" />
+      <param name="tf_prefix" value="$(arg turtle1)" />
+    </node>
+    
+    <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model $(arg turtle1) -x $(arg turtle1_x_pos) -y $(arg turtle1_y_pos) -z $(arg turtle1_z_pos) -Y $(arg turtle1_yaw) -param robot_description" />
+  </group>
+
+  <group ns = "$(arg turtle2)">
+    <param name="robot_description" command="$(find xacro)/xacro $(find turtlebot_description)/urdf/turtlebot3_camera.urdf.xacro" />
+
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher" output="screen">
+      <param name="publish_frequency" type="double" value="50.0" />
+      <param name="tf_prefix" value="$(arg turtle1)" />
+    </node>
+    
+    <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model" args="-urdf -model $(arg turtle2) -x $(arg turtle2_x_pos) -y $(arg turtle2_y_pos) -z $(arg turtle2_z_pos) -Y $(arg turtle2_yaw) -param robot_description" />
+  </group>
+
+    <!-- <node name="teleop" pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" output="screen">
+          <remap from="cmd_vel" to="$(arg turtle1)/cmd_vel"/>
+    </node> -->
+
+
+</launch>

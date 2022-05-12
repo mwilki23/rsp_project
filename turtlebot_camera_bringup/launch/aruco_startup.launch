@@ -4,15 +4,20 @@
 <launch>
 	<arg name="verbose_opt" default="false"/>
 	<arg name="fid_len" default="0.14"/>
+	<arg name="camera" default="/raspicam_node"/>
+	<arg name="image" default="/image/image_repub"/>
+
 	<include file="$(find aruco_detect)/launch/aruco_detect.launch">
 		<arg name="transport" value="compressed"/>
 		<arg name="verbose" value="$(arg verbose_opt)"/>
 		<arg name="fiducial_len" value="$(arg fid_len)"/>
+		<arg name="camera" value="$(arg camera)"/>
+		<arg name="image" value="$(arg image)"/>
 	</include>
 
-	<node pkg="rqt_image_view" 
+	<!-- <node pkg="rqt_image_view" 
         	type="rqt_image_view" 
         	name="rqt_image_view">
-	</node>
+	</node> -->
 
 </launch>

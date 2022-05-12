@@ -1,0 +1,13 @@
+material AR_tag{
+    recieve_shadows off
+    technique
+    {
+        pass
+        {
+            texture_unit
+            {
+                texture AR_tag.jpg
+            }
+        }   
+    }
+}

@@ -1,0 +1,22 @@
+<launch>
+
+    <arg name="turtle1"  default="turtle_ar"/>
+    <arg name="turtle2" default="turtle_follower"/>
+    <arg name="fid_len"  default="0.045"/>
+    <arg name="cmd_topic" default="$(arg turtle1)/cmd_vel"/>
+  	<arg name="sim_mimic" default="false"/>
+
+    <include file="$(find turtlebot3_project_bringup)/launch/two_turtlebot_bringup.launch">
+        <arg name="turtle1"  value="turtle_ar"/>
+        <arg name="turtle2" value="turtle_follower"/>
+    </include>
+    <include file="$(find turtlebot_aruco_driver)/launch/aruco_driver_bringup.launch">
+        <arg name="fid_len"  value="$(arg fid_len)"/>
+        <arg name="cmd_topic" value="$(arg cmd_topic)"/>
+        <arg name="sim_mimic" value="$(arg sim_mimic)"/>
+    </include>
+
+    <node name="teleop" pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" output="screen">
+            <remap from="cmd_vel" to="$(arg turtle1)/cmd_vel"/>
+    </node>
+</launch>

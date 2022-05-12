@@ -1,0 +1,18 @@
+<launch>
+    <arg name="fid_len"  default="0.045"/>
+    <arg name="camera" default="/turtle_follower/raspicam"/>
+    <arg name="image" default="/image_raw"/>
+    <arg name="verbose" default="false"/>
+    <arg name="cmd_topic" default="/cmd_vel"/>
+    <arg name="sim_mimic" default="true"/>
+    
+    
+    <include file="$(find turtlebot_target_follow)/launch/target_follow_start.launch">
+        <arg name="fiducial_length" value="$(arg fid_len)"/>
+        <arg name="verbose" value="$(arg verbose)"/>
+        <arg name="camera" value="$(arg camera)"/>
+	    <arg name="image" value="$(arg image)"/>
+        <arg name="cmd_topic" value="$(arg cmd_topic)"/>
+        <arg name="sim_mimic" value="$(arg sim_mimic)"/>
+    </include>
+</launch>
