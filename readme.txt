@@ -42,7 +42,6 @@ roslaunch aruco_detect aruco_detect.launch transport:=compressed verbose:=true
 rosrun rqt_gui rqt_gui
 
 #########
-For simulation
-(Note: Set the )
-Only launch
+To run the leader-follower simulation in gazebo with 1 autonomous follower turtlebot and 1 AR tag leader turtlebot that has teleop control
+Simply run the following launch file
 roslaunch turtlebot_target_follow follower_simulation.launch
