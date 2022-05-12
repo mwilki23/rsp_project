@@ -15,6 +15,10 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   sensor_msgs
   std_msgs
+  aruco_detect
+  raspicam_node
+  turtlebot3_bringup
+  turtlebot_camera_bringup
 )
 
 ## System dependencies are found with CMake's conventions
