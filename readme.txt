@@ -27,6 +27,11 @@ To change the size of the ar tag to match that of your actual ar tag size change
 	roslaunch turtlebot_target_follow tartget_follow_start fiducial_length:= #tag side length in meters
 
 
+### To run a purely simluation based ar tracking turtlebot (1 autonomous follower turtlebot and 1 AR tag leader turtlebot that has teleop control). Run:
+
+roslaunch turtlebot_target_follow follower_simulation.launch
+
+
 ### To run ar tag vizualiation seperately
 
 ##launches camera
@@ -40,8 +45,3 @@ roslaunch aruco_detect aruco_detect.launch transport:=compressed verbose:=true
 
 ##Use rqt_gui to visualize
 rosrun rqt_gui rqt_gui
-
-#########
-To run the leader-follower simulation in gazebo with 1 autonomous follower turtlebot and 1 AR tag leader turtlebot that has teleop control
-Simply run the following launch file
-roslaunch turtlebot_target_follow follower_simulation.launch
