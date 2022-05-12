@@ -5,7 +5,7 @@
   <arg name="model" default="burger"/>
   
   <arg name="turtle1"  default="turtle_ar"/>
-  <arg name="turtle1_x_pos" default="0.5"/>
+  <arg name="turtle1_x_pos" default="1.5"/>
   <arg name="turtle1_y_pos" default="0.0"/>
   <arg name="turtle1_z_pos" default=" 0.0"/>
   <arg name="turtle1_yaw"   default=" 0.0"/>
