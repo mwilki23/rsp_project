@@ -1,5 +1,4 @@
 <!--- Spawns follower and leader (ARtag) turtlebots in gazebo -->
-	<!---  AR tag bot has teleop as default -->
 
 
 <launch>
