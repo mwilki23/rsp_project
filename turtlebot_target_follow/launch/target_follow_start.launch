@@ -8,8 +8,8 @@
 	<arg name="fiducial_length" default="0.045"/> <!--we use a smaller tag than standard aruco-->
 	<arg name="verbose" default="false"/> <!--easier on proccesor-->
 	<arg name="output" default="log"/> <!--easier on proccesor-->
-	<arg name="camera" default="/raspicam"/>
-    <arg name="image" default="/image/image_repub"/>
+	<arg name="camera" default="/raspicam_node"/>
+    	<arg name="image" default="/image"/>
 	<arg name="cmd_topic" default="/cmd_vel"/>
 	<arg name="sim_mimic" default="true"/>
 
