@@ -3,7 +3,7 @@
 	<arg name="verbose" default="false"/>
 	<arg name="output" default="log"/>
 
-	<include file="$(find turtlebot_target_follow)/launch/turtlebot_real_bringup.launch"/>
+	<include file="$(find turtlebot_target_follow)/launch/turtlebot_sim_mimic.launch"/>
 
 	<include file="$(find turtlebot_camera_bringup)/launch/aruco_startup.launch">
 		<arg name="fid_len" value = "$(arg fiducial_length)"/>
