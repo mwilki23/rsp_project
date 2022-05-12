@@ -1,3 +1,6 @@
+<!--- This launch file is to run the bringup the camera and motor drivers on the turtlebot-->
+<!-- This code NEEDS to be ran on the turtlebot pi-->
+
 <launch>
 	<include file="$(find turtlebot3_bringup)/launch/turtlebot3_robot.launch">
 	</include>

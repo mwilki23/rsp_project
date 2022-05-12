@@ -1,3 +1,6 @@
+<!--- This launch file is to run the aruco ar detection stack and image viewer-->
+<!--- Parameters are given to set the size of the ar tag being detected and to toggle the aruco_detect verbose option-->
+
 <launch>
 	<arg name="verbose_opt" default="false"/>
 	<arg name="fid_len" default="0.14"/>

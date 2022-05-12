@@ -1,7 +1,13 @@
+<!--- This is the main launch file of this project, it: -->
+	<!---  Spawns a gazebo turtlebot -->
+	<!---  Starts the aruco ar tracking node-->
+	<!---  Starts the node the publishes motor commands based on ar-to-bot transform for robot and sim -->
+
+
 <launch>
-	<arg name="fiducial_length" default="0.045"/>
-	<arg name="verbose" default="false"/>
-	<arg name="output" default="log"/>
+	<arg name="fiducial_length" default="0.045"/> <!--we use a smaller tag than standard aruco-->
+	<arg name="verbose" default="false"/> <!--easier on proccesor-->
+	<arg name="output" default="log"/> <!--easier on proccesor-->
 
 	<include file="$(find turtlebot_target_follow)/launch/turtlebot_sim_mimic.launch"/>
 
@@ -10,7 +16,9 @@
 		<arg name="verbose_opt" value = "$(arg verbose)"/>
 	</include> 
 
-	<param name="forward_vel" type = "double" value = "0.1"/>
+<!-- These params allow you to modify the forward and reverse speed of the robot when tracking as well as the speed of rotation when it loses a tag -->
+	<!-- We set these to be slow due to a laggier computer. More powerful computers/sims will want to speed these up-->
+	<param name="forward_vel" type = "double" value = "0.1"/> 
 	<param name="reverse_vel" type = "double" value = "0.025"/>
 	<param name="spin_vel" type = "double" value = "0.1"/>
 

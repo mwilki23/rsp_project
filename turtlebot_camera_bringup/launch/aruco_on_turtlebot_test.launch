@@ -1,3 +1,7 @@
+<!--- This launch file is to run the camera bringup on the turtlebot AND run the aruco tracking on the turtlebot-->
+<!--- This is for test purposes as you are getting your main pc setup, the turtlebot RAM does not handle doing the aruco well-->
+
+
 <launch>
 	<include file="$(find turtlebot_camera_bringup)/launch/camera_bringup.launch"/>
 	

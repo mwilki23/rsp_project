@@ -1,3 +1,6 @@
+<!--- This launch file opens gazebo with a turtlebot spawned -->
+<!---  The command velocity is remapped a different topic so it can mimic the physical bot without any interference-->
+
 <launch>
 	<include file="$(find turtlebot3_gazebo)/launch/turtlebot3_empty_world.launch">
 		<remap from="cmd_vel" to="turtle_follower/cmd_vel"/>	

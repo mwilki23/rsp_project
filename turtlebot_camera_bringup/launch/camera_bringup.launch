@@ -1,3 +1,6 @@
+<!--- This launch file is to run the bringup the camera and necessary image transport for the aruco node on the turtlebot-->
+<!-- This code NEEDS to be ran on the turtlebot pi-->
+
 <launch>
 
 	<include file="$(find raspicam_node)/launch/camerav2_1280x960.launch"/>
