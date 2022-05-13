@@ -13,7 +13,7 @@ __Package Descriptions__
 __turtlebot_target_follow__  
 This package contains the hpp and cpp code for the turtlebot target following. It is the main package of the project.  
 	
-It parses the /fiducial_transforms (transformation from the raspicam on the turtlebot to detected fiducial markers) rostopic and publishes /cmd_vel (wheel velocity commands for the turtlebot) for both physical and simulated turtlebots.   
+It parses the /fiducial_transforms (transformation from the raspicam on the turtlebot to detected fiducial markers) rostopic to obtain the AR tag transformation and publishes wheel velocity commands for both physical and simulated turtlebots to the apprioprate /cmd_vel rostopics based on the AR tag transformation.   
 	
 The package minimizes the angle and maintans a distance of 1 meter between the turtlebot and the detected fiducial transform. If the robot loses the fiducial marker it will rotate in place with a directionality derived from the horizontal offset it last detected the transform. If fiducial transform gets too close to the camera (< 0.7 meters from the camera) the turtlebot will reverse in order to maintain 1 meter distance.  
 	
@@ -49,7 +49,8 @@ __Running the tracker on the physical Turtlebot__
 ```echo 'export LDS_MODEL=LDS-01' >> ~/.bashrc```
 	
 ```echo "export TURTLEBOT3_MODEL=burger" >> ~/.bashrc```
-if your model is the 'waffle' model, replace burger in the line above with waffle
+
+If your model is the 'waffle' model, replace burger in the line above with waffle
 	
 4. In workspace, run:
 
