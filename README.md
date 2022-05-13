@@ -2,10 +2,10 @@
 Kapi Ketan Mehta (kmehta4), Michael Wilkinson (mwilki23), Brian Woronowicz (bworono1)
 ------------------------------------------------
 Repo for Spring 2022 RSP Course Project.
-This package requires that the physical turtlebot has the standard turlebot3 and raspicam packages installed on it.
 
 __Installation__
-To install the package, clone the repository into a catkin workspace.
+------------------------------------------------
+To install the package, clone the repository into a catkin workspace. This package requires that the physical turtlebot has the standard turlebot3 and raspicam packages installed on it.
 
 __Deliverables__
 ------------------------------------------------
