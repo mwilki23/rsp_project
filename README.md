@@ -9,12 +9,12 @@ To install the package, clone the repository into a catkin workspace.
 
 __Package Descriptions__
 ------------------------------------------------
-__turtlebot_target_follow__
-	This package contains the hpp and cpp code for the turtlebot target following. It is the main package of the project.  
+__turtlebot_target_follow__  
+This package contains the hpp and cpp code for the turtlebot target following. It is the main package of the project.  
 	
-	It parses the /fiducial_transforms (transformation from the raspicam on the turtlebot to detected fiducial markers) rostopic and publishes /cmd_vel (wheel velocity commands for the turtlebot) for both physical and simulated turtlebots.   
+It parses the /fiducial_transforms (transformation from the raspicam on the turtlebot to detected fiducial markers) rostopic and publishes /cmd_vel (wheel velocity commands for the turtlebot) for both physical and simulated turtlebots.   
 	
-	The package minimizes the angle between the turtlebot and the detected fiducial transform. If the robot loses the fiducial marker from the left side of the camera, it makes the robot rotate left. If the robot loses the fiducial marker from the right side of the camera, it makes the robot rotate right. Also, if the fiducial transform gets too close to the camera (< 0.7 meters from the camera), then it makes the turtlebot back up.  
+The package minimizes the angle between the turtlebot and the detected fiducial transform. If the robot loses the fiducial marker from the left side of the camera, it makes the robot rotate left. If the robot loses the fiducial marker from the right side of the camera, it makes the robot rotate right. Also, if the fiducial transform gets too close to the camera (< 0.7 meters from the camera), then it makes the turtlebot back up.  
 	
 	
 __turtle_Project_simulation (directory)__  
