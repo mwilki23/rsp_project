@@ -17,17 +17,17 @@ It parses the /fiducial_transforms (transformation from the raspicam on the turt
 The package minimizes the angle between the turtlebot and the detected fiducial transform. If the robot loses the fiducial marker from the left side of the camera, it makes the robot rotate left. If the robot loses the fiducial marker from the right side of the camera, it makes the robot rotate right. Also, if the fiducial transform gets too close to the camera (< 0.7 meters from the camera), then it makes the turtlebot back up.  
 	
 	
-__turtle_Project_simulation__
+__turtle_Project_simulation (Directory)__
 
-####turtlebot_description####
+___turtlebot_description___
 
 This package contains files required for 3D model descriptions for the turtlebots and AR tag.  
 	
-####turtlebot3_project_bringup####
+___turtlebot3_project_bringup___
 
 This package contains launch files required to spawn a follower turtlebot and AR tag leader Turtlebot in gazebo.  
 	
-####turtlebot_aruco_driver####
+___turtlebot_aruco_driver___
 
 This package contains launch file to run the aruco AR tag detection purely in simulation.  
 	
