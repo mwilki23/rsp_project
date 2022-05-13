@@ -85,7 +85,7 @@ To change the size of the ar tag to match that of your actual ar tag size change
 __Usage with Gazebo Simulation Only__
 -----------------------------------------------
 
-There are launch files which allows to run the simulation only version of the task with gazebo.
+To do a gazebo simulation-only version of the target tracking where the turtlebot follows a teleoperated turtlebot with an AR tag, run:
 	
 ```roslaunch turtlebot_target_follow follower_simulation.launch```
 
