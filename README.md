@@ -46,9 +46,9 @@ __Running the tracker on the physical Turtlebot__
 1. Ensure the ROS_MASTER_URI and ROS_HOSTNAME are appropriately set on the turtlebot and main pc such that the ROS_MASTER_URI matches on both machines and the ROS_HOSTNAME matches the machines IP address
 
 2. Run the following commands in your main pc's terminal:
-	echo 'export LDS_MODEL=LDS-01' >> ~/.bashrc
-	echo "export TURTLEBOT3_MODEL=burger" >> ~/.bashrc
-	echo "source ~/<workspace project is in>/devel/setup.bash" >> ~/.bashrc
+  	echo 'export LDS_MODEL=LDS-01' >> ~/.bashrc
+  	echo "export TURTLEBOT3_MODEL=burger" >> ~/.bashrc
+  	echo "source ~/<workspace project is in>/devel/setup.bash" >> ~/.bashrc
 
 4. In workspace, run:
 	catkin build turtlebot_target_follow
