@@ -15,7 +15,7 @@ This package contains the hpp and cpp code for the turtlebot target following. I
 	
 It parses the /fiducial_transforms (transformation from the raspicam on the turtlebot to detected fiducial markers) rostopic and publishes /cmd_vel (wheel velocity commands for the turtlebot) for both physical and simulated turtlebots.   
 	
-The package minimizes the angle between the turtlebot and the detected fiducial transform. If the robot loses the fiducial marker from the left side of the camera, it makes the robot rotate left. If the robot loses the fiducial marker from the right side of the camera, it makes the robot rotate right. Also, if the fiducial transform gets too close to the camera (< 0.7 meters from the camera), then it makes the turtlebot back up.  
+The package minimizes the angle and maintans a distance of 1 meter between the turtlebot and the detected fiducial transform. If the robot loses the fiducial marker it will rotate in place with a directionality derived from the horizontal offset it last detected the transform. If fiducial transform gets too close to the camera (< 0.7 meters from the camera) the turtlebot will reverse in order to maintain 1 meter distance.  
 	
 	
 __turtle_Project_simulation (Directory)__
