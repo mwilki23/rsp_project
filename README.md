@@ -50,8 +50,10 @@ __Running the tracker on the physical Turtlebot__
 	
 ```echo "export TURTLEBOT3_MODEL=burger" >> ~/.bashrc```
 	
-4. In workspace, run:  
-The following instructions assume that a catkin workspace has been created at '$WORKSPACE' and the source path os at `$WORKSPACE/src`
+4. In workspace, run:
+
+The following instructions assume that a catkin workspace has been created at '$WORKSPACE' and the source path is present at `$WORKSPACE/src`
+
 ```catkin build turtlebot_target_follow```  
 	
 ```
