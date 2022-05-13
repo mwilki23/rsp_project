@@ -21,7 +21,7 @@ __turtle_Project_simulation (Directory)__
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;__turtlebot_description__
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;his package contains files required for 3D model descriptions for the turtlebots and AR tag.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This package contains files required for 3D model descriptions for the turtlebots and AR tag.  
 	
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;__turtlebot3_project_bringup__
 
