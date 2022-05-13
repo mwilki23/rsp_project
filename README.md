@@ -67,6 +67,7 @@ If your model is the 'waffle' model, replace 'burger' in the line above with 'wa
 4. The following instructions assume that a catkin workspace has been created at `$WORKSPACE` and the source path is present at `$WORKSPACE/src`
 
 ```catkin build turtlebot_target_follow```. In the workspace, run:
+
 	
 ```
 echo source $WORKSPACE/devel/setup.bash >> ~/.bashrc
