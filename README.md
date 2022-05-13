@@ -21,15 +21,15 @@ __turtle_Project_simulation (Directory)__
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;__turtlebot_description__
 
-This package contains files required for 3D model descriptions for the turtlebots and AR tag.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;his package contains files required for 3D model descriptions for the turtlebots and AR tag.  
 	
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;__turtlebot3_project_bringup__
 
-This package contains launch files required to spawn a follower turtlebot and AR tag leader Turtlebot in gazebo.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This package contains launch files required to spawn a follower turtlebot and AR tag leader Turtlebot in gazebo.  
 	
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;__turtlebot_aruco_driver__
 
-This package contains launch file to run the aruco AR tag detection purely in simulation.  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This package contains launch file to run the aruco AR tag detection purely in simulation.  
 	
 __turtlebot_camera_bringup__  
 
