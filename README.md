@@ -36,9 +36,11 @@ To change the size of the ar tag to match that of your actual ar tag size change
 	roslaunch turtlebot_target_follow tartget_follow_start fiducial_length:= #tag side length in meters
   
 __Running the tracker on Turtlebot purely in Gazebo__
+	
   roslaunch turtlebot_target_follow follower_simulation.launch
   
 __To run ar tag vizualiation seperately__
+	
   ##launches camera
 roslaunch raspicam_node camerav2_1280x960.launch
 
