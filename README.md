@@ -1,5 +1,5 @@
 # RSP Final Project: Turtlebot Follow the Leader
-Ketan Mehta, Michael Wilkinson, Brian Woronowicz
+Kapi Ketan Mehta, Michael Wilkinson, Brian Woronowicz
 ------------------------------------------------
 Repo for Spring 2022 RSP Course Project.
 For this project, we produced the code necessary to have a turtlebot use its raspicam to detect and follow a fiducial marker (AR tag), both in real life and in gazebo. 
@@ -48,17 +48,17 @@ __Running the tracker on the physical Turtlebot__
 2. Run the following commands in your main pc's terminal:  
 	
 	
-	echo 'export LDS_MODEL=LDS-01' >> ~/.bashrc  
+	```echo 'export LDS_MODEL=LDS-01' >> ~/.bashrc```
 	
-  	echo "export TURTLEBOT3_MODEL=burger" >> ~/.bashrc  
+  	```echo "export TURTLEBOT3_MODEL=burger" >> ~/.bashrc```
 	
-	echo "source ~/<WORKSPACE>/devel/setup.bash" >> ~/.bashrc
+	```echo "source ~/<WORKSPACE>/devel/setup.bash" >> ~/.bashrc```
 
 4. In workspace, run:  
 	
-	catkin build turtlebot_target_follow  
+	```catkin build turtlebot_target_follow```  
 	
-	source ~/.bashrc
+	```source ~/.bashrc```
 
 5.  Run roscore on either turtlebot or your machine (depending on which has the MASTER_URI)
 
