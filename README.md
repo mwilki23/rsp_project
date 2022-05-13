@@ -2,7 +2,7 @@
 Kapi Ketan Mehta, Michael Wilkinson, Brian Woronowicz
 ------------------------------------------------
 Repo for Spring 2022 RSP Course Project.
-For this project, we produced the code necessary to have a turtlebot use its raspicam to detect and follow a fiducial marker (AR tag), both in real life and in gazebo. 
+For this project, we produced the code necessary to have a turtlebot use its raspicam to detect and follow a fiducial marker (AR tag), both in real life and in gazebo. This package requires that the physical turtlebot has the standard turlebot3 and raspicam packages installed on it.
 
 __Installation__
 To install the package, clone the repository into a catkin workspace.
@@ -49,6 +49,7 @@ __Running the tracker on the physical Turtlebot__
 ```echo 'export LDS_MODEL=LDS-01' >> ~/.bashrc```
 	
 ```echo "export TURTLEBOT3_MODEL=burger" >> ~/.bashrc```
+if your model is the 'waffle' model, replace burger in the line above with waffle
 	
 4. In workspace, run:
 
