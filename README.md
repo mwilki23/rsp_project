@@ -49,13 +49,16 @@ __Running the tracker on the physical Turtlebot__
 
 
   	echo 'export LDS_MODEL=LDS-01' >> ~/.bashrc
+	
   	echo "export TURTLEBOT3_MODEL=burger" >> ~/.bashrc
+	
   	echo "source ~/<workspace project is in>/devel/setup.bash" >> ~/.bashrc
 
 4. In workspace, run:
 	
 	
 	catkin build turtlebot_target_follow
+	
 	source ~/.bashrc
 
 5. roscore on either turtlebot or your machine (depending on which has the MASTER_URI)
@@ -85,14 +88,18 @@ __Running the tracker on Turtlebot purely in Gazebo__
   
 __To run ar tag vizualiation seperately__
 	
-  ##launches camera
+##launches camera
+	
 roslaunch raspicam_node camerav2_1280x960.launch
 
 ##compresses camera image to use for ar tag tracking
+	
 rosrun image_transport republish compressed in:=/raspicam_node/image raw out:=/raspicam_node/image/image_repub
 
 ##Launches Ar Tag Track
+	
 roslaunch aruco_detect aruco_detect.launch transport:=compressed verbose:=true
 
 ##Use rqt_gui to visualize
+	
 rosrun rqt_gui rqt_gui
