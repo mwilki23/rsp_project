@@ -64,26 +64,26 @@ __Running the tracker on the physical Turtlebot__
 
 If your model is the 'waffle' model, replace 'burger' in the line above with 'waffle'. These lines _should_ be present in the turtlebots .bashrc as well. If not run these lines on the turtlebot too.
 	
-4. The following instructions assume that a catkin workspace has been created at `$WORKSPACE` and the source path is present at `$WORKSPACE/src`.  In the workspace, run:
+3. The following instructions assume that a catkin workspace has been created at `$WORKSPACE` and the source path is present at `$WORKSPACE/src`.  In the workspace, run:
 
 ```catkin build turtlebot_target_follow```.
 	
 ```
-echo source $WORKSPACE/devel/setup.bash >> ~/.bashrc
+echo 'source $WORKSPACE/devel/setup.bash' >> ~/.bashrc
 # Replace $WORKSPACE with the appropriate workspace path. This ensures your .bashrc will link you to the built packages.
 ```
 
 ```source ~/.bashrc```  
 
-5.  Run roscore on either turtlebot or your machine (depending on which has the MASTER_URI)
+4.  Run roscore on either turtlebot or your machine (depending on which has the MASTER_URI)
 
-6. ssh to turtlebot and run:  
+5. ssh to turtlebot and run:  
 	
 ```roslaunch turtlebot_target_follow turtlebot_bringup.launch```
 
 This will launch the raspicamera, do the image transport needed for the ar tag processing node, and launch the turtlebot3_robot.bringup which starts all the motor drivers, gryo, etc on the turtlebot. 
 
-7. On main computer run:  
+6. On main computer run:  
 	
 ```roslaunch turtlebot_target_follow target_follow_start.launch```
 
