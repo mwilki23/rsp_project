@@ -52,7 +52,7 @@ __Running the tracker on the physical Turtlebot__
 	
   	echo "export TURTLEBOT3_MODEL=burger" >> ~/.bashrc  
 	
-	echo "source ~/<workspace project is in>/devel/setup.bash" >> ~/.bashrc
+	echo "source ~/<WORKSPACE>/devel/setup.bash" >> ~/.bashrc
 
 4. In workspace, run:  
 	
@@ -60,7 +60,7 @@ __Running the tracker on the physical Turtlebot__
 	
 	source ~/.bashrc
 
-5.  roscore on either turtlebot or your machine (depending on which has the MASTER_URI)
+5.  Run roscore on either turtlebot or your machine (depending on which has the MASTER_URI)
 
 6. ssh to turtlebot and run:  
 	
@@ -78,24 +78,24 @@ To change the size of the ar tag to match that of your actual ar tag size change
 	
 	roslaunch turtlebot_target_follow tartget_follow_start fiducial_length:= #tag side length in meters
   
-__Running the tracker on Turtlebot purely in Gazebo__  
+__Running the simulation version of the turtlebot with AR tag and the follower turtlebot__  
 	
 	roslaunch turtlebot_target_follow follower_simulation.launch
   
 __To run ar tag vizualiation seperately__
 	
-##launches camera  
+__Launch camera__  
 	
 	roslaunch raspicam_node camerav2_1280x960.launch
 
-##compresses camera image to use for ar tag tracking  
+__Image transpost converts the images into suitable compressed format to use for ar tag tracking__
 	
 	rosrun image_transport republish compressed in:=/raspicam_node/image raw out:=/raspicam_node/image/image_repub
 
-##Launches Ar Tag Track  
+__Launches Ar Tag Track__
 	
 	roslaunch aruco_detect aruco_detect.launch transport:=compressed verbose:=true
 
-##Use rqt_gui to visualize  
+__Use rqt_gui to visualize__
 	
 	rosrun rqt_gui rqt_gui
