@@ -60,11 +60,16 @@ __Running the tracker on the physical Turtlebot__
 	
 	source ~/.bashrc
 
-5. roscore on either turtlebot or your machine (depending on which has the MASTER_URI)
+5. 
+	
+	  roscore on either turtlebot or your machine (depending on which has the MASTER_URI)
 
 6. ssh to turtlebot and run:  
 	
-	roslaunch turtlebot_target_follow turtlebot_bringup.launch
+	
+	
+	
+	  roslaunch turtlebot_target_follow turtlebot_bringup.launch
 
 This will launch the raspicamera, do the image transport needed for the ar tag processing node, and launch the turtlebot3_robot.bringup which starts all the motor drivers, gryo, etc on the turtlebot. 
 
