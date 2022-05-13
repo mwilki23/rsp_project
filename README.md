@@ -71,10 +71,11 @@ The following instructions assume that a catkin workspace has been created at `$
 ```catkin build turtlebot_target_follow```  
 	
 ```
-source $WORKSPACE/devel/setup.bash
-
-# Replace $WORKSPACE with the appropriate worksapce path
+echo source $WORKSPACE/devel/setup.bash >> ~/.bashrc
+# Replace $WORKSPACE with the appropriate workspace path. This ensures your .bashrc will link you to the built packages.
 ```
+
+```source ~/.bashrc```  
 
 5.  Run roscore on either turtlebot or your machine (depending on which has the MASTER_URI)
 
