@@ -62,7 +62,7 @@ __Running the tracker on the physical Turtlebot__
 	
 ```echo "export TURTLEBOT3_MODEL=burger" >> ~/.bashrc```
 
-If your model is the 'waffle' model, replace 'burger' in the line above with 'waffle'.
+If your model is the 'waffle' model, replace 'burger' in the line above with 'waffle'. These lines _should_ be present in the turtlebots .bashrc as well. If not run these lines on the turtlebot too.
 	
 4. In workspace, run:
 
