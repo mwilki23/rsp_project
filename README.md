@@ -54,10 +54,9 @@ __Running the tracker on the physical Turtlebot__
 	
   	echo "source ~/<workspace project is in>/devel/setup.bash" >> ~/.bashrc
 
-4. In workspace, run:
+4. In workspace, run:    
 	
-	
-	catkin build turtlebot_target_follow
+	catkin build turtlebot_target_follow  
 	
 	source ~/.bashrc
 
@@ -70,7 +69,6 @@ __Running the tracker on the physical Turtlebot__
 This will launch the raspicamera, do the image transport needed for the ar tag processing node, and launch the turtlebot3_robot.bringup which starts all the motor drivers, gryo, etc on the turtlebot. 
 
 7. On main computer run:  
-	
 	
 	roslaunch turtlebot_target_follow target_follow_start.launch
 
@@ -86,18 +84,18 @@ __Running the tracker on Turtlebot purely in Gazebo__
   
 __To run ar tag vizualiation seperately__
 	
-##launches camera
+##launches camera  
 	
-roslaunch raspicam_node camerav2_1280x960.launch
+	roslaunch raspicam_node camerav2_1280x960.launch
 
-##compresses camera image to use for ar tag tracking
+##compresses camera image to use for ar tag tracking  
 	
-rosrun image_transport republish compressed in:=/raspicam_node/image raw out:=/raspicam_node/image/image_repub
+	rosrun image_transport republish compressed in:=/raspicam_node/image raw out:=/raspicam_node/image/image_repub
 
-##Launches Ar Tag Track
+##Launches Ar Tag Track  
 	
-roslaunch aruco_detect aruco_detect.launch transport:=compressed verbose:=true
+	roslaunch aruco_detect aruco_detect.launch transport:=compressed verbose:=true
 
-##Use rqt_gui to visualize
+##Use rqt_gui to visualize  
 	
-rosrun rqt_gui rqt_gui
+	rosrun rqt_gui rqt_gui
