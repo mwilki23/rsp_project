@@ -1,5 +1,5 @@
 # RSP Final Project: Turtlebot Follow the Leader
-Kapi Ketan Mehta, Michael Wilkinson (mwilki23), Brian Woronowicz (bworono1)
+Kapi Ketan Mehta (kmehta4), Michael Wilkinson (mwilki23), Brian Woronowicz (bworono1)
 ------------------------------------------------
 Repo for Spring 2022 RSP Course Project.
 This package requires that the physical turtlebot has the standard turlebot3 and raspicam packages installed on it.
