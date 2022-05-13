@@ -5,7 +5,7 @@ Repo for Spring 2022 RSP Course Project.
 
 __Installation__
 ------------------------------------------------
-To install the package, clone the repository into a catkin workspace. This package requires that the physical turtlebot has the standard turlebot3 and raspicam packages installed on it.
+To install the package, clone the repository into a catkin workspace on a main PC (not on the actual turtlebot). This package requires that the physical turtlebot has the standard turlebot3 and raspicam packages installed on it (this is all that is required on the turtlebot).
 
 __Deliverables__
 ------------------------------------------------
