@@ -4,12 +4,15 @@ Ketan Mehta, Michael Wilkinson, Brian Woronowicz
 Repo for Spring 2022 RSP Course Project.
 For this project, we produced the code necessary to have a turtlebot use its raspicam to detect and follow a fiducial marker, both in real life and in gazebo. 
 
-# > Package Descriptions
-
 __Installation__
 To install the package, clone the repository into a catkin workspace.
 
-# > Running the package
+__Package Descriptions__
+------------------------------------------------
+
+
+__Running the project__
+------------------------------------------------
 
 __Running the tracker on the physical Turtlebot__
 1. Ensure the ROS_MASTER_URI and ROS_HOSTNAME are appropriately set on the turtlebot and main pc such that the ROS_MASTER_URI matches on both machines and the ROS_HOSTNAME matches the machines IP address
