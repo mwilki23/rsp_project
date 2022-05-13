@@ -1,15 +1,28 @@
 # RSP Final Project: Turtlebot Follow the Leader
-Kapi Ketan Mehta, Michael Wilkinson, Brian Woronowicz
+Kapi Ketan Mehta, Michael Wilkinson (mwilki23), Brian Woronowicz
 ------------------------------------------------
 Repo for Spring 2022 RSP Course Project.
-For this project, we produced the code necessary to have a turtlebot use its raspicam to detect and follow a fiducial marker (AR tag), both in real life and in gazebo. This package requires that the physical turtlebot has the standard turlebot3 and raspicam packages installed on it.
+This package requires that the physical turtlebot has the standard turlebot3 and raspicam packages installed on it.
 
 __Installation__
 To install the package, clone the repository into a catkin workspace.
 
+__Deliverables__
+For this project, we produced the code necessary to have a turtlebot use its raspicam to detect and follow a fiducial marker (AR tag), both in real life and in gazebo. To do so we have created the following packages (Descriptions in Package Description Section):
+_Camera Related_
+- turtlebot_camera_bringup
+_Hardware Related_
+- turtlebot_target_follow
+_Simulation Related_
+- turtlebot3_project_bringup
+- turtlebot_description
+- turtlebot_aruco_driver
 
 __Package Descriptions__
 ------------------------------------------------
+__turtlebot_camera_bringup__  
+This package contains launch files to start the raspicam on the turtlebot and launch aruco AR tag detection (using aruco_detect package) on the main pc.
+
 __turtlebot_target_follow__  
 This package contains the hpp and cpp code for the turtlebot target following. It is the main package of the project.  
 	
@@ -32,12 +45,6 @@ __turtle_Project_simulation (Directory)__
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;This package contains launch file to run the aruco AR tag detection purely in simulation.  
 	
-__turtlebot_camera_bringup__  
-
-This package contains launch files to start the raspicam on the turtlebot and launch aruco AR tag detection
-
-
-
 
 __Running the project__
 ------------------------------------------------
