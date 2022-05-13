@@ -9,7 +9,7 @@ To install the package, clone the repository into a catkin workspace.
 
 __Deliverables__
 ------------------------------------------------
-For this project, we produced the code necessary to have a turtlebot use its raspicam to detect and follow a fiducial marker (AR tag), both in real life and in gazebo. To do so we have created the following packages (Descriptions in Package Description Section):
+For this project, we produced the code necessary to have a turtlebot use its raspicam to detect and follow a fiducial marker (AR tag), both in real life and in gazebo. To do so we have created the following packages (descriptions in Package Description section):
 
 __Camera Related__
 - turtlebot_camera_bringup
