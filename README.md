@@ -64,27 +64,21 @@ __Running the tracker on the physical Turtlebot__
 5. roscore on either turtlebot or your machine (depending on which has the MASTER_URI)
 
 6. ssh to turtlebot and run:  
-	
-	
 	roslaunch turtlebot_target_follow turtlebot_bringup.launch
 
 This will launch the raspicamera, do the image transport needed for the ar tag processing node, and launch the turtlebot3_robot.bringup which starts all the motor drivers, gryo, etc on the turtlebot. 
 
 7. On main computer run:  
-	
-	
 	roslaunch turtlebot_target_follow target_follow_start.launch
 
 This is start the aruco package which handles the ar tag transforms, gazebo to that shows a simulated turtlebot mimicing the real one, and the target_follow_node which reads in the ar tag transform and sends appriopriate motor commands to the cmd_vel topic for the turtlebot and mimic to move.
 
-To change the size of the ar tag to match that of your actual ar tag size change the fiducial_length rosparam via:
-	
-	
+To change the size of the ar tag to match that of your actual ar tag size change the fiducial_length rosparam via:  
 	roslaunch turtlebot_target_follow tartget_follow_start fiducial_length:= #tag side length in meters
   
 __Running the tracker on Turtlebot purely in Gazebo__
-	
-  roslaunch turtlebot_target_follow follower_simulation.launch
+  
+	roslaunch turtlebot_target_follow follower_simulation.launch
   
 __To run ar tag vizualiation seperately__
 	
