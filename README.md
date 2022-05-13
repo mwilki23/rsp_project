@@ -50,13 +50,11 @@ __Running the tracker on the physical Turtlebot__
 	
 ```echo "export TURTLEBOT3_MODEL=burger" >> ~/.bashrc```
 	
-```echo "source ~/<WORKSPACE>/devel/setup.bash" >> ~/.bashrc```
-
 4. In workspace, run:  
-	
+The following instructions assume that a catkin workspace has been created at '$WORKSPACE' and the source path os at `$WORKSPACE/src`
 ```catkin build turtlebot_target_follow```  
 	
-```source ~/.bashrc```
+```source $WORKSPACE/devel/setup.bash```
 
 5.  Run roscore on either turtlebot or your machine (depending on which has the MASTER_URI)
 
@@ -76,7 +74,8 @@ To change the size of the ar tag to match that of your actual ar tag size change
 	
 ```roslaunch turtlebot_target_follow tartget_follow_start fiducial_length:= #tag side length in meters```
   
-__Running the simulation version of the turtlebot with AR tag and the follower turtlebot__  
+__Usage with Gazebo Simulation__
+There are 
 	
 ```roslaunch turtlebot_target_follow follower_simulation.launch```
   
