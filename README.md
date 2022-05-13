@@ -64,38 +64,38 @@ __Running the tracker on the physical Turtlebot__
 
 6. ssh to turtlebot and run:  
 	
-	'''roslaunch turtlebot_target_follow turtlebot_bringup.launch'''
+	```roslaunch turtlebot_target_follow turtlebot_bringup.launch```
 
 This will launch the raspicamera, do the image transport needed for the ar tag processing node, and launch the turtlebot3_robot.bringup which starts all the motor drivers, gryo, etc on the turtlebot. 
 
 7. On main computer run:  
 	
-	'''roslaunch turtlebot_target_follow target_follow_start.launch'''
+	```roslaunch turtlebot_target_follow target_follow_start.launch```
 
 This is start the aruco package which handles the ar tag transforms, gazebo to that shows a simulated turtlebot mimicing the real one, and the target_follow_node which reads in the ar tag transform and sends appriopriate motor commands to the cmd_vel topic for the turtlebot and mimic to move.
 
 To change the size of the ar tag to match that of your actual ar tag size change the fiducial_length rosparam via:  
 	
-	'''roslaunch turtlebot_target_follow tartget_follow_start fiducial_length:= #tag side length in meters'''
+	```roslaunch turtlebot_target_follow tartget_follow_start fiducial_length:= #tag side length in meters```
   
 __Running the simulation version of the turtlebot with AR tag and the follower turtlebot__  
 	
-	'''roslaunch turtlebot_target_follow follower_simulation.launch'''
+	```roslaunch turtlebot_target_follow follower_simulation.launch```
   
 __To run ar tag vizualiation seperately__
 	
 __Launch camera__  
 	
-	'''roslaunch raspicam_node camerav2_1280x960.launch'''
+	```roslaunch raspicam_node camerav2_1280x960.launch```
 
 __Image transpost converts the images into suitable compressed format to use for ar tag tracking__
 	
-	'''rosrun image_transport republish compressed in:=/raspicam_node/image raw out:=/raspicam_node/image/image_repub'''
+	```rosrun image_transport republish compressed in:=/raspicam_node/image raw out:=/raspicam_node/image/image_repub```
 
 __Launches Ar Tag Track__
 	
-	'''roslaunch aruco_detect aruco_detect.launch transport:=compressed verbose:=true'''
+	```roslaunch aruco_detect aruco_detect.launch transport:=compressed verbose:=true```
 
 __Use rqt_gui to visualize__
 	
-	'''rosrun rqt_gui rqt_gui'''
+	```rosrun rqt_gui rqt_gui```
