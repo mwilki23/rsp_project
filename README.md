@@ -84,7 +84,10 @@ __Usage with Gazebo Simulation Only__
 There are launch files which allows to run the simulation only version of the task with gazebo.
 	
 ```roslaunch turtlebot_target_follow follower_simulation.launch```
-  
+
+__Miscellaneous__
+-----------------------------------------------
+
 __To run ar tag vizualiation seperately__
 	
 __Launch camera__  
