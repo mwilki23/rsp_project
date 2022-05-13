@@ -50,7 +50,7 @@ __Running the tracker on the physical Turtlebot__
 	
 ```echo "export TURTLEBOT3_MODEL=burger" >> ~/.bashrc```
 
-If your model is the 'waffle' model, replace burger in the line above with waffle
+If your model is the 'waffle' model, replace 'burger' in the line above with 'waffle'.
 	
 4. In workspace, run:
 
@@ -61,7 +61,7 @@ The following instructions assume that a catkin workspace has been created at `$
 ```
 source $WORKSPACE/devel/setup.bash
 
-# Replace $WORKSAPCE with the appropriate worksapce path
+# Replace $WORKSPACE with the appropriate worksapce path
 ```
 
 5.  Run roscore on either turtlebot or your machine (depending on which has the MASTER_URI)
