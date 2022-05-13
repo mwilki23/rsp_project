@@ -18,19 +18,19 @@ The package minimizes the angle between the turtlebot and the detected fiducial 
 	
 	
 *__turtle_Project_simulation__
- *__turtlebot_description__  
+
+	*__turtlebot_description__  
 
 This package contains files required for 3D model descriptions for the turtlebots and AR tag.  
 	
- *__turtlebot3_project_bringup__  
+	*__turtlebot3_project_bringup__  
 
 This package contains launch files required to spawn a follower turtlebot and AR tag leader Turtlebot in gazebo.  
 	
- *__turtlebot_aruco_driver__  
+	*__turtlebot_aruco_driver__  
 
 This package contains launch file to run the aruco AR tag detection purely in simulation.  
 	
-
 __turtlebot_camera_bringup__  
 
 This package contains launch files to start the raspicam on the turtlebot and launch aruco AR tag detection
