@@ -64,11 +64,9 @@ __Running the tracker on the physical Turtlebot__
 
 If your model is the 'waffle' model, replace 'burger' in the line above with 'waffle'. These lines _should_ be present in the turtlebots .bashrc as well. If not run these lines on the turtlebot too.
 	
-4. In workspace, run:
+4. The following instructions assume that a catkin workspace has been created at `$WORKSPACE` and the source path is present at `$WORKSPACE/src`
 
-The following instructions assume that a catkin workspace has been created at `$WORKSPACE` and the source path is present at `$WORKSPACE/src`
-
-```catkin build turtlebot_target_follow```  
+```catkin build turtlebot_target_follow```. In the workspace, run:
 	
 ```
 echo source $WORKSPACE/devel/setup.bash >> ~/.bashrc
