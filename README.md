@@ -5,7 +5,7 @@ Repo for Spring 2022 RSP Course Project.
 
 __Installation__
 ------------------------------------------------
-To install the package, clone the repository into a catkin workspace on a main PC (not on the actual turtlebot). This package requires that the physical turtlebot has the standard turlebot3 and raspicam packages installed on it (this is all that is required on the turtlebot).
+To install the package, clone the repository into a catkin workspace on a main PC (not on the actual turtlebot). For implementation on the physical turtlebot, this package requires that the physical turtlebot has the standard turlebot3 and raspicam packages installed on it (this is all that is required on the turtlebot). The external packages included in this project (aruco_detect, raspicam_node, turtlebot3) assume a Melodic distribution but should work on a Kinetic distro as well.
 
 __Deliverables__
 ------------------------------------------------
